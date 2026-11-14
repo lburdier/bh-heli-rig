@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Black Hawk Rig",
     "author": "Lucas Burdier",
-    "version": (1, 3, 0),
+    "version": (1, 3, 1),
     "blender": (4, 2, 0),
     "location": "Vue 3D > Barre latérale (N) > Black Hawk",
     "description": "Pilote le rig du UH-60 : boucle, rotors, pales, vol stationnaire, portes et LEDs",

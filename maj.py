@@ -299,6 +299,12 @@ def draw_status(layout, compact=False):
     st = state["status"]
     up = updated_from()
     pre = CFG["prefix"]
+    if not online_allowed():
+        col = layout.column(align=True)
+        col.label(text="Mises à jour : autorise l'accès en ligne", icon='INTERNET_OFFLINE')
+        if not compact:
+            col.label(text="Préférences › Système › Réseau › Autoriser l'accès en ligne")
+        return
     if up and st not in ("available", "downloading", "downloaded", "installing"):
         layout.label(text="Mis à jour : %s → %s" % up, icon='CHECKMARK')
         if compact:
